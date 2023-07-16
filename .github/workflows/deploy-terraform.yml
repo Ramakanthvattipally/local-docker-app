@@ -53,8 +53,8 @@ jobs:
           username: ${{ secrets.ARM_CLIENT_ID }}
           password: ${{ secrets.ARM_CLIENT_SECRET }}
       - run: |
-          docker build . -t terraformdockeracr.azurecr.io/sampleapp:${{ github.sha }}
-          docker push terraformdockeracr.azurecr.io/sampleapp:${{ github.sha }}
+          docker build . -t ramterraformdockeracr.azurecr.io/sampleapp:${{ github.sha }}
+          docker push ramterraformdockeracr.azurecr.io/sampleapp:${{ github.sha }}
 
       - name: "Deploy to Azure Container Instances"
         uses: "azure/aci-deploy@v1"
